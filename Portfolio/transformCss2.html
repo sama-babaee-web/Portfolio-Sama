@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/x-icon" />
+    <title>Moon</title>
+    <style>
+        *{
+            margin: 0;
+            height: 0;
+            box-sizing: border-box;
+        }
+        main{
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.863);
+        }
+        .box{
+            width: 500px;
+            height: 500px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%)rotateX(15deg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform-style: preserve-3d;
+        }
+        .moon{
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background-color: rgba(245, 245, 245, 0.774);
+            box-shadow: 0 0 30px 1px rgba(255, 255, 255, 0.733);
+        }
+        .box>strong{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate3d(-50%, -50%, 300px);
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            text-transform: uppercase;
+            font-size: 7rem;
+            transform-origin: 50% 50% -300px;
+            transition: 20s linear;
+            display: flex;
+            transform-style: preserve-3d;
+        }
+        .box>strong>span{
+            display: flex;
+            flex-grow: 1;
+        }
+        .box>strong>span:nth-of-type(1){
+            transform: translateZ(-30px)rotateY(-40deg);
+            transform-origin: right;
+        }
+        .box>strong>span:nth-of-type(4){
+            transform: translateZ(-30px)rotateY(40deg);
+            transform-origin: left;
+        }
+        .box>strong>span:nth-of-type(2){
+            transform: translateZ(-15px)rotateY(-20deg);
+        }
+        .box>strong>span:nth-of-type(3){
+            transform: translateZ(-15px)rotateY(20deg);
+        }
+        .box:hover>strong{
+            transform: translate3d(-50%, -50%, 300px)rotateY(360deg);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="box">
+            <div class="moon"></div>
+            <strong>
+                <span>s</span>
+                <span>a</span>
+                <span>m</span>
+                <span>a</span>
+            </strong>
+        </div>
+    </main>
+</body>
+</html>

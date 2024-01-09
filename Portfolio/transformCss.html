@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/x-icon" />
+    <title>IconsSocialMedia</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .menu {
+            width: 80px;
+            margin: 200px auto;
+            transform: skew(33deg, -15deg)
+        }
+
+        .menu>li {
+            background: black;
+            color: white;
+            height: 75px;
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style-type: none;
+            position: relative;
+            transition: 1s
+        }
+
+        .menu>li:hover {
+            transform: translate(20px, -20px);
+            background: rgb(3, 61, 155);
+            box-shadow: -40px 40px 2px gray;
+            cursor: pointer;
+
+        }
+
+        .menu>li:hover::before {
+            background: rgb(102, 195, 248);
+
+        }
+
+        .menu>li:hover::after {
+            background: rgb(3, 61, 155);
+        }
+
+        .menu>li::before,
+        .menu>li::after {
+            content: '';
+            display: block;
+            position: absolute;
+            transition: 1s
+        }
+
+        .menu>li::before {
+            width: 100%;
+            height: 10px;
+            background: rgb(195, 195, 195);
+            bottom: -10px;
+            left: 0;
+            transform: skewX(-32deg) translateX(-3px);
+        }
+
+        .menu>li::after {
+            background: rgb(70, 70, 70);
+            width: 6px;
+            height: 100%;
+            left: -6px;
+            top: 0;
+            transform: skewY(-58deg) translateY(5px);
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="menu">
+        <li><i class="fa fa-telegram" aria-hidden="true"></i></li>
+        <li><i class="fa fa-whatsapp" aria-hidden="true"></i></li>
+        <li><i class="fa fa-instagram" aria-hidden="true"></i></li>
+        <li><i class="fa fa-facebook" aria-hidden="true"></i></li>
+        <li><i class="fa fa-twitter" aria-hidden="true"></i></li>
+    </ul>
+</body>
+
+</html>
