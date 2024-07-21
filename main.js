@@ -20,18 +20,31 @@ document
     htmlDc.scrollTop = 0;
   });
 
-// coded by amo mohsen
 
 
 
+document.addEventListener('DOMContentLoaded', function () {
+  const birthDate = new Date(2002, 1, 1); // Month is 0-indexed, so February is 1
+  const currentDate = new Date();
 
-if ("serviceWorker" in navigator) { 
-navigator.serviceWorker
-   .register("serviceWorker.js") 
-  .then(reg => {
-     console.log("Service worker registred successfully", reg);
-   })
-   .catch(err => {
-     console.log("service worker not registred !!", err);
-   }); 
+  let age = currentDate.getFullYear() - birthDate.getFullYear();
+  const monthDifference = currentDate.getMonth() - birthDate.getMonth();
+
+  if (monthDifference < 0 || (monthDifference === 0 && currentDate.getDate() < birthDate.getDate())) {
+    age--;
+  }
+
+  document.getElementById('dynamicAge').textContent = age;
+});
+
+
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker
+    .register("serviceWorker.js")
+    .then(reg => {
+      console.log("Service worker registred successfully", reg);
+    })
+    .catch(err => {
+      console.log("service worker not registred !!", err);
+    });
 }

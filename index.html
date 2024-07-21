@@ -12,11 +12,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
   <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon" />
   <link rel="manifest" href="manifest.json">
-  <meta name='theme-color' content='#2d2d2d'>
   <link rel='apple-touch-icon' href='https://samababaee.ir/assets/img/logo.png'>
-
-
-
 
   <title>Sama Babaee</title>
 </head>
@@ -59,15 +55,15 @@
           <div class="col-12 col-lg-8 aboutTxt__sama order-2 order-lg-1 mt-5 mt-lg-0">
             <div class="row">
               <p>WELCOME TO MY WORLD</p>
-              <h1>
+              <h2>
                 Hi, I’m
                 <span>Sama Babaee</span>
-              </h1>
+              </h2>
               <p class="col-12 col-md-8">
-                im currently 21 years old. I live in Tehran And love
+                im currently <span id="dynamicAge"></span> years old. I live in Tehran And love
                 programming. I started my web design training in Parnian
                 institution by Mr.
-                <strong>Parsa Ghorbanian</strong> .
+                Parsa Ghorbanian .
               </p>
             </div>
 
@@ -76,10 +72,6 @@
                 <li class="col-12 col-xl-6 my-3">
                   <i class="bi bi-calendar-check"></i>
                   Birthday : <span> 2002.7.2</span>
-                </li>
-                <li class="col-12 col-xl-6 my-3">
-                  <i class="bi bi-calendar"></i>
-                  Age : <span> 21</span>
                 </li>
                 <li class="col-12 col-xl-6 my-3">
                   <i class="bi bi-geo-alt"></i>
@@ -158,7 +150,26 @@
 
         <div class="row my-5 justify-content-center align-items-center">
 
-
+          <section class="col-12 col-md-5 col-xl-3 m-3 p-5 bg-light portfolio__cards">
+            <div class="row">
+              <figure class="figure col-12 d-flex justify-content-center align-items-center">
+                <a href="https://tarsim.netlify.app/" target="_blank">
+                  <img src="Portfolio/img-portfolio/tarsimgaran.png" class="figure-img m-0 col-12 img-fluid rounded" />
+                </a>
+              </figure>
+              <div class="row col-12 m-0 info-portfolio">
+                <div class="col-6 p-0 m-0 info-portfolio__sec1">
+                  <a href="">Warranty Site</a>
+                </div>
+                <div class="col-6 p-0 m-0 d-flex justify-content-end info-portfolio__sec2 text-white">
+                  <span><a href=""><i class="bi bi-heart"></i>680</a></span>
+                </div>
+              </div>
+              <a href="https://tarsim.netlify.app/" target="_blank">
+                <h3>Tarsim Garan<i class="bi bi-arrow-up-right"></i></h3>
+              </a>
+            </div>
+          </section>
           <section class="col-12 col-md-5 col-xl-3 m-3 p-5 bg-light portfolio__cards">
             <div class="row">
               <figure class="figure col-12 d-flex justify-content-center align-items-center">
@@ -183,7 +194,7 @@
           <section class="col-12 col-md-5 col-xl-3 m-3 p-5 bg-light portfolio__cards">
             <div class="row">
               <figure class="figure col-12 d-flex justify-content-center align-items-center">
-                <a href="https://www.titandisti.com/" target="_blank">
+                <a href="https://samababaee-titan.netlify.app/" target="_blank">
                   <img src="Portfolio/img-portfolio/titan.png" class="figure-img m-0 col-12 img-fluid rounded" />
                 </a>
               </figure>
@@ -195,7 +206,7 @@
                   <span><a href=""><i class="bi bi-heart"></i>680</a></span>
                 </div>
               </div>
-              <a href="https://www.titandisti.com/" target="_blank">
+              <a href="https://samababaee-titan.netlify.app/" target="_blank">
                 <h3>Titan Technology<i class="bi bi-arrow-up-right"></i></h3>
               </a>
             </div>
@@ -286,7 +297,7 @@
               </a>
             </div>
           </section>
-          
+
           <section class="col-12 col-md-5 col-xl-3 m-3 p-5 bg-light portfolio__cards">
             <div class="row">
               <figure class="figure col-12 d-flex justify-content-center align-items-center">
@@ -307,8 +318,8 @@
               </a>
             </div>
           </section>
-          
-          
+
+
           <section class="col-12 col-md-5 col-xl-3 m-3 p-5 bg-light portfolio__cards">
             <div claa,as="row">
               <figure class="figure col-12 d-flex justify-content-center align-items-center">
@@ -329,7 +340,7 @@
               </a>
             </div>
           </section>
-          
+
         </div>
       </section>
       <!-- End My Blog Sama -->
@@ -345,8 +356,8 @@
           <section class="col-12 col-md-5 col-xl-3 m-3 p-5 bg-light portfolio__cards">
             <div class="row">
               <figure class="figure col-12 d-flex justify-content-center align-items-center">
-                <a href="https://sama-babaee-web.github.io/Animation-Bubble/" target="_blank"><img src="Portfolio/img-portfolio/trick1.png"
-                    class="figure-img m-0 col-12 img-fluid rounded" /></a>
+                <a href="https://sama-babaee-web.github.io/Animation-Bubble/" target="_blank"><img
+                    src="Portfolio/img-portfolio/trick1.png" class="figure-img m-0 col-12 img-fluid rounded" /></a>
               </figure>
               <div class="row col-12 m-0 info-portfolio">
                 <div class="col-6 p-0 m-0 info-portfolio__sec1">
@@ -756,7 +767,8 @@
                           <a href="https://t.me/sama_b4" target="_blank"><i class="bi bi-telegram h4"></i></a>
                         </li>
                         <li class="box-icon social">
-                          <a href="https://github.com/sama-babaee-web" target="_blank"><i class="bi bi-github h4"></i></a>
+                          <a href="https://github.com/sama-babaee-web" target="_blank"><i
+                              class="bi bi-github h4"></i></a>
                         </li>
                       </ul>
                     </div>
@@ -822,7 +834,7 @@
       <!-- **** Start Footer **** -->
       <footer class="text-center text-lg-start text-muted py-5 mb-2">
         <div class="text-center p-4 text-reset fw-bold h6  mt-5 end-footer">
-          Designed and developed by 🤍Sama Babaee🤍
+          <a href="https://imsama.ir/"> Designed and developed by 🤍 <strong>Sama Babaee</strong>🤍</a>
         </div>
       </footer>
       <!-- **** End Footer **** -->
